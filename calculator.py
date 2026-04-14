@@ -1,9 +1,13 @@
+# https://github.com/samfreitag18-ai/lab11-SF
+# Partner 1: Samuel Freitag
+# Partner 2: No one reached out :(
+
 import math
 
 
 def square_root(a):
     if a < 0:
-        raise ValueError
+        raise ValueError("square root undefined for negative numbers")
     return math.sqrt(a)
 
 
@@ -25,15 +29,39 @@ def multiply(a, b):
 
 def divide(a, b):
     if a == 0:
-        raise ZeroDivisionError
+        raise ZeroDivisionError("cannot divide by zero")
     return b / a
 
 
 def logarithm(a, b):
     if a <= 0 or a == 1 or b <= 0:
-        raise ValueError
+        raise ValueError("invalid logarithm arguments")
     return math.log(b, a)
 
 
 def exponent(a, b):
+    return a ** b
+
+
+def sub(a, b):
+    return a - b
+
+
+def mul(a, b):
+    return a * b
+
+
+def div(a, b):
+    if a == 0:
+        raise ZeroDivisionError("cannot divide by zero")
+    return b / a
+
+
+def log(a, b):
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError("invalid logarithm arguments")
+    return math.log(b, a)
+
+
+def exp(a, b):
     return a ** b
